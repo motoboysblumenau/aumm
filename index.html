@@ -29,7 +29,18 @@
       z-index: 10;
     }
 
-    header .logo {
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      width: 50px;
+      height: 50px;
+    }
+
+    .logo-text {
       font-size: 22px;
       font-weight: bold;
       color: #ea1d2c;
@@ -82,71 +93,149 @@
     .hero .btn-cadastro {
       font-size: 16px;
     }
+
+    section.noticias {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    section.noticias h2 {
+      text-align: center;
+      font-size: 26px;
+      margin-bottom: 40px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .noticia-card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .noticia-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .noticia-card .conteudo {
+      padding: 20px;
+    }
+
+    .tag {
+      font-size: 13px;
+      color: #ea1d2c;
+      border: 1px solid #ea1d2c;
+      padding: 2px 8px;
+      border-radius: 20px;
+    }
+
+    .noticia-card h3 {
+      margin: 15px 0 10px;
+      font-size: 18px;
+    }
+
+    .meta {
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    .noticia-card a {
+      color: #ea1d2c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    footer {
+      background: #222;
+      color: #fff;
+      padding: 30px 20px;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 28px;
+      }
+    }
   </style>
 </head>
-<!-- Adicione isso abaixo da seção HERO e antes do </body> -->
-<section style="padding: 40px 20px; max-width: 1200px; margin: auto;">
-  <h2 style="text-align: center; font-size: 26px; margin-bottom: 40px;">
-    Fique por dentro das últimas notícias sobre entregadores
-  </h2>
-
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-    <!-- NOTÍCIA 1 -->
-    <div style="background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-      <img src="foto1.png" alt="Reunião Cetran" style="width: 100%; height: 180px; object-fit: cover;">
-      <div style="padding: 20px;">
-        <span style="font-size: 13px; color: #ea1d2c; border: 1px solid #ea1d2c; padding: 2px 8px; border-radius: 20px;">Informação</span>
-        <h3 style="margin: 15px 0 10px;">Reunião com o Cetran: demandas da categoria</h3>
-        <p style="font-size: 13px; color: #666;">22 de abril de 2025 • 8 min de leitura</p>
-        <a href="#" style="color: #ea1d2c; text-decoration: none; font-weight: bold; font-size: 14px;">Ler mais</a>
-      </div>
-    </div>
-
-    <!-- NOTÍCIA 2 -->
-    <div style="background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-      <img src="foto2.png" alt="Curso CANTO" style="width: 100%; height: 180px; object-fit: cover;">
-      <div style="padding: 20px;">
-        <span style="font-size: 13px; color: #ea1d2c; border: 1px solid #ea1d2c; padding: 2px 8px; border-radius: 20px;">Informação</span>
-        <h3 style="margin: 15px 0 10px;">Curso popular para entregadores: Projeto CANTO</h3>
-        <p style="font-size: 13px; color: #666;">26 de abril de 2025 • 7 min de leitura</p>
-        <a href="#" style="color: #ea1d2c; text-decoration: none; font-weight: bold; font-size: 14px;">Ler mais</a>
-      </div>
-    </div>
-
-    <!-- NOTÍCIA 3 -->
-    <div style="background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-      <img src="foto3.png" alt="Câmara de Vereadores" style="width: 100%; height: 180px; object-fit: cover;">
-      <div style="padding: 20px;">
-        <span style="font-size: 13px; color: #ea1d2c; border: 1px solid #ea1d2c; padding: 2px 8px; border-radius: 20px;">Segurança</span>
-        <h3 style="margin: 15px 0 10px;">Associação na Câmara: voz dos motoboys de Blumenau</h3>
-        <p style="font-size: 13px; color: #666;">18 de abril de 2025 • 6 min de leitura</p>
-        <a href="#" style="color: #ea1d2c; text-decoration: none; font-weight: bold; font-size: 14px;">Ler mais</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- RODAPÉ -->
-<footer style="background: #222; color: #fff; padding: 30px 20px; text-align: center; margin-top: 60px;">
-  <p style="margin-bottom: 10px;">CNPJ: 45.115.209/0001-39 - 45115209000139</p>
-  <p>Razão Social: Associação União Maior Motoboys (Aumm)</p>
-</footer>
-
 <body>
+
+  <!-- HEADER -->
   <header>
-    <div class="logo">Associação União Maior</div>
+    <div class="logo">
+      <img src="logo.png" alt="Logo AUMM">
+      <div class="logo-text">União Maior</div>
+    </div>
     <nav>
       <a href="#como-funciona">Como funciona</a>
-      <a href="#vantagens">Vantagens</a>
+      <a href="#noticias">Notícias</a>
       <a href="#faq">FAQ</a>
       <a class="btn-cadastro" href="#cadastro">Comece agora</a>
     </nav>
   </header>
 
+  <!-- HERO -->
   <section class="hero">
     <h1>Seja um entregador parceiro e mude sua realidade</h1>
     <p>Ganhe dinheiro com flexibilidade, dignidade e o apoio da nossa associação.</p>
     <a href="#cadastro" class="btn-cadastro">Quero me cadastrar</a>
   </section>
+
+  <!-- NOTÍCIAS -->
+  <section class="noticias" id="noticias">
+    <h2>Fique por dentro das últimas notícias sobre entregadores</h2>
+    <div class="card-grid">
+      <!-- Notícia 1 -->
+      <div class="noticia-card">
+        <img src="foto1.png" alt="Reunião Cetran">
+        <div class="conteudo">
+          <span class="tag">Informação</span>
+          <h3>Reunião com o Cetran: demandas da categoria</h3>
+          <p class="meta">22 de abril de 2025 • 8 min de leitura</p>
+          <a href="#">Ler mais</a>
+        </div>
+      </div>
+
+      <!-- Notícia 2 -->
+      <div class="noticia-card">
+        <img src="foto2.png" alt="Curso CANTO">
+        <div class="conteudo">
+          <span class="tag">Informação</span>
+          <h3>Curso popular para entregadores: Projeto CANTO</h3>
+          <p class="meta">26 de abril de 2025 • 7 min de leitura</p>
+          <a href="#">Ler mais</a>
+        </div>
+      </div>
+
+      <!-- Notícia 3 -->
+      <div class="noticia-card">
+        <img src="foto3.png" alt="Câmara de Vereadores">
+        <div class="conteudo">
+          <span class="tag">Segurança</span>
+          <h3>Associação na Câmara: voz dos motoboys de Blumenau</h3>
+          <p class="meta">18 de abril de 2025 • 6 min de leitura</p>
+          <a href="#">Ler mais</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <p>CNPJ: 45.115.209/0001-39 - 45115209000139</p>
+    <p>Razão Social: Associação União Maior Motoboys (Aumm)</p>
+  </footer>
 </body>
 </html>
