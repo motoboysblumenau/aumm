@@ -193,6 +193,41 @@
       background-color: #c81b25;
     }
 
+    .social-media, .parceiros {
+      margin-top: 20px;
+    }
+
+    .social-media h3, .parceiros h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .social-icons, .parceiro-icons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .social-icons a, .parceiro-icons a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background-color: #ea1d2c;
+      border-radius: 50%;
+      text-decoration: none;
+    }
+
+    .social-icons a:hover, .parceiro-icons a:hover {
+      background-color: #c81b25;
+    }
+
+    .social-icons img, .parceiro-icons img {
+      width: 24px;
+      height: 24px;
+    }
+
     /* Media Queries para Responsividade */
     @media (max-width: 768px) {
       header {
@@ -269,6 +304,20 @@
         font-size: 13px;
         padding: 8px 15px;
       }
+
+      .social-media h3, .parceiros h3 {
+        font-size: 14px;
+      }
+
+      .social-icons a, .parceiro-icons a {
+        width: 36px;
+        height: 36px;
+      }
+
+      .social-icons img, .parceiro-icons img {
+        width: 20px;
+        height: 20px;
+      }
     }
   </style>
 </head>
@@ -338,6 +387,29 @@
     <p>CNPJ: 45.115.209/0001-39 - 45115209000139</p>
     <p>Razão Social: Associação União Maior Motoboys (Aumm)</p>
     <a class="btn-whatsapp" href="https://wa.me/5547992847850" target="_blank">Maiores informações WhatsApp: (47) 99284-7850</a>
+    <div class="social-media">
+      <h3>Siga-nos nas Redes Sociais</h3>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/AUMMBR.OFICIAL/" target="_blank">
+          <img src="facebook.png" alt="Facebook AUMM">
+        </a>
+        <a href="https://www.instagram.com/aumm.oficial/" target="_blank">
+          <img src="instagram.png" alt="Instagram AUMM">
+        </a>
+      </div>
+    </div>
+    <div class="parceiros">
+      <h3>Parceiros</h3>
+      <p>Motoboys Blumenau</p>
+      <div class="parceiro-icons">
+        <a href="https://www.instagram.com/motoboysblumenau/" target="_blank">
+          <img src="instagram.png" alt="Instagram Motoboys Blumenau">
+        </a>
+        <a href="https://chat.whatsapp.com/FzaVR48qy9i24b9WakWPUZ" target="_blank">
+          <img src="whatsapp.png" alt="WhatsApp Motoboys Blumenau">
+        </a>
+      </div>
+    </div>
   </footer>
 
   <script>
