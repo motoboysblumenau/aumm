@@ -1,177 +1,104 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Associação União Maior Motoboys Blumenau</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Entregador | Associação União Maior</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
       color: #333;
     }
 
     header {
-      background-color: #222;
+      background-color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #ea1d2c;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #ea1d2c;
+    }
+
+    .btn-cadastro {
+      background-color: #ea1d2c;
       color: white;
-      padding: 30px;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       text-align: center;
+      padding: 60px 20px;
+      background-color: #fef2f2;
     }
 
-    header img {
-      width: 120px;
-      margin-bottom: 15px;
+    .hero h1 {
+      font-size: 38px;
+      max-width: 700px;
+      margin-bottom: 20px;
     }
 
-    main {
-      padding: 20px;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    section {
+    .hero p {
+      font-size: 18px;
+      max-width: 600px;
       margin-bottom: 30px;
     }
 
-    .whatsapp {
-      display: inline-block;
-      padding: 12px 20px;
-      background-color: #25D366;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-
-    /* Carrossel */
-    .carousel-container {
-      position: relative;
-      width: 100%;
-      max-width: 800px;
-      margin: 30px auto;
-      overflow: hidden;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-      background: white;
-    }
-
-    .carousel-slide {
-      display: none;
-      padding: 20px;
-    }
-
-    .carousel-slide.active {
-      display: block;
-    }
-
-    .carousel-slide img {
-      width: 100%;
-      border-radius: 5px;
-      margin-bottom: 15px;
-    }
-
-    .carousel-text {
-      font-size: 15px;
-      line-height: 1.5;
-    }
-
-    .carousel-controls {
-      text-align: center;
-      margin-top: 10px;
-    }
-
-    .carousel-controls button {
-      background: #222;
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      margin: 0 5px;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-
-    .carousel-controls button:hover {
-      background: #444;
+    .hero .btn-cadastro {
+      font-size: 16px;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Logo Associação União Maior">
-    <h1>Associação União Maior</h1>
-    <h3>Motoboys de Blumenau</h3>
+    <div class="logo">Associação União Maior</div>
+    <nav>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#vantagens">Vantagens</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn-cadastro" href="#cadastro">Comece agora</a>
+    </nav>
   </header>
 
-  <main>
-    <section>
-      <h2>Missão</h2>
-      <p>Inclusão dos motoboys, direitos e afins.</p>
-    </section>
-
-    <section>
-      <h2>Galeria de Ações</h2>
-      <div class="carousel-container">
-        <div class="carousel-slide active">
-          <img src="foto1.png" alt="Reunião com o Presidente do Cetran">
-          <div class="carousel-text">
-            <strong>Salve família!!</strong><br><br>
-            Na terça-feira dia 22 de abril de 2025 tivemos uma reunião com o Presidente do Cetran @atanirantunes na sede do DETRAN em Florianópolis para apresentar as demandas da categoria.<br><br>
-            Agradecemos grandemente por toda atenção e pela força que o Sr. @atanirantunes nos deu e se prontificou em nos ajudar [... abreviado]
-          </div>
-        </div>
-
-        <div class="carousel-slide">
-          <img src="foto2.png" alt="Curso para entregadores">
-          <div class="carousel-text">
-            <strong>1º de maio: Dia Internacional dos Trabalhadores(as)</strong><br><br>
-            Relembramos a atividade do sábado, 26 de abril, com a segunda turma do curso "Construindo Autonomia nos Territórios" — Projeto CANTO, financiado pelo Edital Labora do Fundo Brasil. [...]
-          </div>
-        </div>
-
-        <div class="carousel-slide">
-          <img src="foto3.png" alt="Câmara de Vereadores de Blumenau">
-          <div class="carousel-text">
-            <strong>Nesse dia a emoção bateu forte!</strong><br><br>
-            A Associação foi à Câmara de Vereadores expor as dificuldades da categoria em Blumenau. A área azul foi discutida, abusos de empresas, pontos de apoio e muito mais. [...]
-          </div>
-        </div>
-
-        <div class="carousel-controls">
-          <button onclick="changeSlide(-1)">⬅ Anterior</button>
-          <button onclick="changeSlide(1)">Próximo ➡</button>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Contato</h2>
-      <p>Fale conosco no WhatsApp:</p>
-      <a class="whatsapp" href="https://wa.me/554792524104" target="_blank">+55 47 9252-4104</a>
-    </section>
-
-    <section>
-      <h2>Mais em breve</h2>
-      <p>Estamos construindo nosso site com mais informações, fotos e agenda. Fique ligado!</p>
-    </section>
-  </main>
-
-  <script>
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.carousel-slide');
-
-    function showSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.classList.toggle('active', i === index);
-      });
-    }
-
-    function changeSlide(direction) {
-      currentSlide = (currentSlide + direction + slides.length) % slides.length;
-      showSlide(currentSlide);
-    }
-
-    // Slide automático a cada 7 segundos
-    setInterval(() => changeSlide(1), 7000);
-  </script>
+  <section class="hero">
+    <h1>Seja um entregador parceiro e mude sua realidade</h1>
+    <p>Ganhe dinheiro com flexibilidade, dignidade e o apoio da nossa associação.</p>
+    <a href="#cadastro" class="btn-cadastro">Quero me cadastrar</a>
+  </section>
 </body>
 </html>
