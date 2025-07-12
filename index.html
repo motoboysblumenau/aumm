@@ -25,9 +25,11 @@
       align-items: center;
       padding: 20px 40px;
       border-bottom: 1px solid #eee;
-      position: sticky;
+      position: fixed;
       top: 0;
-      z-index: 10;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
     }
 
     .logo {
@@ -82,6 +84,7 @@
       text-align: center;
       padding: 60px 20px 30px;
       background-color: #fef2f2;
+      margin-top: 70px; /* Ajustado para evitar sobreposição com header fixo */
     }
 
     .hero h1 {
@@ -181,216 +184,14 @@
       nav {
         display: none;
         flex-direction: column;
-        position: absolute;
+        position: fixed;
         top: 70px;
         left: 0;
         width: 100%;
         background-color: #fff;
         padding: 20px;
         border-bottom: 1px solid #eee;
-      }
-
-      nav.active {
-        display: flex;
-      }
-
-      nav a {
-        margin: 10understood! First, I'll provide the corrected main code (`index.html`) with all the previous improvements (responsive design, hamburger menu, and the "Me tornar um associado" button) and update the "Ler mais" links to point to specific news pages (`noticia1.html`, `noticia2.html`, `noticia3.html`). Then, I'll create the `noticia1.html` file for the full news article. Since this is an update to the previous `index.html`, I'll reuse the same `artifact_id`.
-
-### Step 1: Corrected Main Code (`index.html`)
-The code below includes all previous fixes (hamburger menu, responsive design) and updates the "Ler mais" links to point to `noticia1.html`, `noticia2.html`, and `noticia3.html`. These files are assumed to be in the same directory as `index.html`.
-
-<xaiArtifact artifact_id="cc1c80f1-8032-4389-8c4c-f08ee328f4b0" artifact_version_id="fbdb519f-e980-40bf-b6a0-9746eeb11e38" title="index.html" contentType="text/html">
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Associação União Maior</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #fff;
-      color: #333;
-    }
-
-    /* HEADER */
-    header {
-      background-color: #fff;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px;
-      border-bottom: 1px solid #eee;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .logo img {
-      height: 50px;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-    }
-
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      color: #ea1d2c;
-    }
-
-    .btn-cadastro {
-      background-color: #ea1d2c;
-      color: white;
-      padding: 10px 18px;
-      border: none;
-      border-radius: 6px;
-      font-weight: bold;
-      cursor: pointer;
-      text-decoration: none;
-    }
-
-    .menu-toggle {
-      display: none;
-      font-size: 24px;
-      cursor: pointer;
-    }
-
-    /* HERO */
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 60px 20px 30px;
-      background-color: #fef2f2;
-    }
-
-    .hero h1 {
-      font-size: 38px;
-      max-width: 700px;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      font-size: 18px;
-      max-width: 600px;
-      margin-bottom: 30px;
-    }
-
-    /* NOTÍCIAS */
-    section.noticias {
-      padding: 40px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    section.noticias h2 {
-      text-align: center;
-      font-size: 26px;
-      margin-bottom: 40px;
-    }
-
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .noticia-card {
-      background: #fff;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    .noticia-card img {
-      width: 100%;
-      height: auto;
-      aspect-ratio: 16/9;
-      object-fit: cover;
-    }
-
-    .noticia-card .conteudo {
-      padding: 15px;
-    }
-
-    .tag {
-      font-size: 13px;
-      color: #ea1d2c;
-      border: 1px solid #ea1d2c;
-      padding: 2px 8px;
-      border-radius: 20px;
-    }
-
-    .noticia-card h3 {
-      margin: 15px 0 10px;
-      font-size: 18px;
-    }
-
-    .meta {
-      font-size: 13px;
-      color: #666;
-      margin-bottom: 10px;
-    }
-
-    .noticia-card a {
-      color: #ea1d2c;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 14px;
-    }
-
-    /* RODAPÉ */
-    footer {
-      background: #222;
-      color: #fff;
-      padding: 30px 20px;
-      text-align: center;
-      margin-top: 60px;
-    }
-
-    /* Media Queries para Responsividade */
-    @media (max-width: 768px) {
-      header {
-        padding: 15px 20px;
-      }
-
-      .menu-toggle {
-        display: block;
-      }
-
-      nav {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background-color: #fff;
-        padding: 20px;
-        border-bottom: 1px solid #eee;
+        z-index: 999;
       }
 
       nav.active {
@@ -406,217 +207,9 @@ The code below includes all previous fixes (hamburger menu, responsive design) a
         margin-top: 10px;
       }
 
-      .hero h1
-
-System: Entendido! Vou completar o código principal (`index.html`) corrigido, mantendo todas as melhorias anteriores (menu hambúrguer, responsividade, botão "Me tornar um associado") e atualizando os links de "Ler mais" para apontarem para os arquivos de notícias (`noticia1.html`, `noticia2.html`, `noticia3.html`). Depois, criarei o arquivo `noticia1.html` com o conteúdo completo da primeira notícia. Como é uma atualização do `index.html` anterior, usarei o mesmo `artifact_id` para ele. Para o `noticia1.html`, usarei um novo `artifact_id`, já que é um arquivo novo.
-
-### Passo 1: Código Principal Corrigido (`index.html`)
-O código abaixo inclui todas as correções de responsividade, o menu hambúrguer, o botão "Me tornar um associado" com o link correto, e atualiza os links de "Ler mais" para apontarem para `noticia1.html`, `noticia2.html` e `noticia3.html`. Também corrigi o trecho truncado na media query do CSS.
-
-<xaiArtifact artifact_id="cc1c80f1-8032-4389-8c4c-f08ee328f4b0" artifact_version_id="7c5cb4d1-fa38-4064-84ad-ffe28a64c094" title="index.html" contentType="text/html">
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Associação União Maior</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #fff;
-      color: #333;
-    }
-
-    /* HEADER */
-    header {
-      background-color: #fff;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px;
-      border-bottom: 1px solid #eee;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .logo img {
-      height: 50px;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-    }
-
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      color: #ea1d2c;
-    }
-
-    .btn-cadastro {
-      background-color: #ea1d2c;
-      color: white;
-      padding: 10px 18px;
-      border: none;
-      border-radius: 6px;
-      font-weight: bold;
-      cursor: pointer;
-      text-decoration: none;
-    }
-
-    .menu-toggle {
-      display: none;
-      font-size: 24px;
-      cursor: pointer;
-    }
-
-    /* HERO */
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 60px 20px 30px;
-      background-color: #fef2f2;
-    }
-
-    .hero h1 {
-      font-size: 38px;
-      max-width: 700px;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      font-size: 18px;
-      max-width: 600px;
-      margin-bottom: 30px;
-    }
-
-    /* NOTÍCIAS */
-    section.noticias {
-      padding: 40px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    section.noticias h2 {
-      text-align: center;
-      font-size: 26px;
-      margin-bottom: 40px;
-    }
-
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .noticia-card {
-      background: #fff;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    .noticia-card img {
-      width: 100%;
-      height: auto;
-      aspect-ratio: 16/9;
-      object-fit: cover;
-    }
-
-    .noticia-card .conteudo {
-      padding: 15px;
-    }
-
-    .tag {
-      font-size: 13px;
-      color: #ea1d2c;
-      border: 1px solid #ea1d2c;
-      padding: 2px 8px;
-      border-radius: 20px;
-    }
-
-    .noticia-card h3 {
-      margin: 15px 0 10px;
-      font-size: 18px;
-    }
-
-    .meta {
-      font-size: 13px;
-      color: #666;
-      margin-bottom: 10px;
-    }
-
-    .noticia-card a {
-      color: #ea1d2c;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 14px;
-    }
-
-    /* RODAPÉ */
-    footer {
-      background: #222;
-      color: #fff;
-      padding: 30px 20px;
-      text-align: center;
-      margin-top: 60px;
-    }
-
-    /* Media Queries para Responsividade */
-    @media (max-width: 768px) {
-      header {
-        padding: 15px 20px;
-      }
-
-      .menu-toggle {
-        display: block;
-      }
-
-      nav {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background-color: #fff;
-        padding: 20px;
-        border-bottom: 1px solid #eee;
-      }
-
-      nav.active {
-        display: flex;
-      }
-
-      nav a {
-        margin: 10px 0;
-        text-align: center;
-      }
-
-      .btn-cadastro {
-        margin-top: 10px;
+      .hero {
+        margin-top: 90px;
+        padding: 40px 15px;
       }
 
       .hero h1 {
@@ -657,7 +250,7 @@ O código abaixo inclui todas as correções de responsividade, o menu hambúrgu
     </div>
     <div class="menu-toggle">☰</div>
     <nav>
-      <a href="#como-funciona">Como funciona</a>
+      <a href="comofunciona.html">Como funciona</a>
       <a href="#vantagens">Vantagens</a>
       <a href="#faq">FAQ</a>
       <a class="btn-cadastro" href="https://forms.gle/36CqsHcLRo5EaN4CA">Me tornar um associado</a>
