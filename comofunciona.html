@@ -1,1 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Como Funciona - Associação União Maior</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
+      color: #333;
+    }
+
+    /* HEADER */
+    header {
+      background-color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      border-bottom: 1px solid #eee;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #ea1d2c;
+    }
+
+    .btn-cadastro {
+      background-color: #ea1d2c;
+      color: white;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* CONTEÚDO COMO FUNCIONA */
+    .como-funciona {
+      max-width: 800px;
+      margin: 80px auto 40px;
+      padding: 0 20px;
+    }
+
+    .como-funciona img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .como-funciona h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .como-funciona h2 {
+      font-size: 22px;
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+
+    .como-funciona p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .como-funciona strong {
+      font-weight: bold;
+    }
+
+    .btn-voltar {
+      display: inline-block;
+      color: #ea1d2c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+      margin-top: 20px;
+    }
+
+    /* RODAPÉ */
+    footer {
+      background: #222;
+      color: #fff;
+      padding: 30px 20px;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    /* Media Queries para Responsividade */
+    @media (max-width: 768px) {
+      header {
+        padding: 15px 20px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        padding: 20px;
+        border-bottom: 1px solid #eee;
+        z-index: 999;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      nav a {
+        margin: 10px 0;
+        text-align: center;
+      }
+
+      .btn-cadastro {
+        margin-top: 10px;
+      }
+
+      .como-funciona {
+        margin-top: 90px;
+      }
+
+      .como-funciona h1 {
+        font-size: 24px;
+      }
+
+      .como-funciona h2 {
+        font-size: 20px;
+      }
+
+      .como-funciona p {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .como-funciona h1 {
+        font-size: 20px;
+      }
+
+      .como-funciona h2 {
+        font-size: 18px;
+      }
+
+      .como-funciona p {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Logo AUMM">
+    </div>
+    <div class="menu-toggle">☰</div>
+    <nav>
+      <a href="comofunciona.html">Como funciona</a>
+      <a href="index.html#vantagens">Vantagens</a>
+      <a href="index.html#faq">FAQ</a>
+      <a class="btn-cadastro" href="https://forms.gle/36CqsHcLRo5EaN4CA">Me tornar um associado</a>
+    </nav>
+  </header>
+
+  <!-- CONTEÚDO COMO FUNCIONA -->
+  <section class="como-funciona">
+    <img src="comofunciona.png" alt="Como Funciona AUMM">
+    <h1>Como Funciona a Associação</h1>
+    <p>Na <strong>União Maior Motoboys</strong>, acreditamos que a força de uma categoria está na união. Nossa associação foi criada para ser um ponto de apoio, troca e crescimento para todos os motoboys que enfrentam a correria do dia a dia nas ruas.</p>
+    <p><strong>Aqui, você não está sozinho.</strong></p>
+    <p>Nosso objetivo é construir uma comunidade sólida e acolhedora, onde cada motoboy sinta que tem voz, vez e apoio real. A gente trabalha para fortalecer a categoria, buscando melhorias, representatividade e mais dignidade para a profissão. Atuamos em pautas coletivas, promovendo debates, mobilizações e ações que realmente fazem a diferença na vida de quem vive sobre duas rodas.</p>
+    
+    <h2>Quem pode se associar?</h2>
+    <p>Qualquer motoboy pode fazer parte da União Maior. Não importa se você é autônomo, registrado, iniciante ou veterano. O importante é querer contribuir e crescer junto com a categoria.</p>
+    
+    <h2>Quanto custa?</h2>
+    <p><strong>Nada.</strong> Não cobramos taxa de adesão — e acreditamos que o acesso à organização e à informação deve ser livre para todos.</p>
+    
+    <h2>Como se associar?</h2>
+    <p>É bem simples: clique no botão no topo da página e preencha o formulário. Rapidinho você já faz parte dessa rede de apoio.</p>
+    
+    <p>Ao se associar, você entra para uma comunidade que se ajuda, se informa, se fortalece e luta junta por melhorias reais — seja nas condições de trabalho, nos direitos ou no reconhecimento da profissão.</p>
+    <p>A <strong>União Maior Motoboys</strong> é mais do que uma associação. É um movimento feito por motoboys, para motoboys.</p>
+    <p><strong>Vem com a gente. ✊🏽🛵</strong></p>
+    <a href="index.html" class="btn-voltar">Voltar para o início</a>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <p>CNPJ: 45.115.209/0001-39 - 45115209000139</p>
+    <p>Razão Social: Associação União Maior Motoboys (Aumm)</p>
+  </footer>
+
+  <script>
+    // JavaScript para o menu hambúrguer
+    document.querySelector('.menu-toggle').addEventListener('click', () => {
+      document.querySelector('nav').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
