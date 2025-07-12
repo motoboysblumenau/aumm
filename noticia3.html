@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Associação na Câmara: Voz dos Motoboys de Blumenau - Associação União Maior</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
+      color: #333;
+    }
+
+    /* HEADER */
+    header {
+      background-color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #ea1d2c;
+    }
+
+    .btn-cadastro {
+      background-color: #ea1d2c;
+      color: white;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* CONTEÚDO DA NOTÍCIA */
+    .noticia-conteudo {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .noticia-conteudo img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .noticia-conteudo .tag {
+      font-size: 13px;
+      color: #ea1d2c;
+      border: 1px solid #ea1d2c;
+      padding: 2px 8px;
+      border-radius: 20px;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    .noticia-conteudo h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .noticia-conteudo .meta {
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .noticia-conteudo p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .noticia-conteudo ul {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      padding-left: 20px;
+    }
+
+    .noticia-conteudo strong {
+      font-weight: bold;
+    }
+
+    .btn-voltar {
+      display: inline-block;
+      color: #ea1d2c;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+      margin-top: 20px;
+    }
+
+    /* RODAPÉ */
+    footer {
+      background: #222;
+      color: #fff;
+      padding: 30px 20px;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    /* Media Queries para Responsividade */
+    @media (max-width: 768px) {
+      header {
+        padding: 15px 20px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        padding: 20px;
+        border-bottom: 1px solid #eee;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      nav a {
+        margin: 10px 0;
+        text-align: center;
+      }
+
+      .btn-cadastro {
+        margin-top: 10px;
+      }
+
+      .noticia-conteudo h1 {
+        font-size: 24px;
+      }
+
+      .noticia-conteudo p, .noticia-conteudo ul {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .noticia-conteudo h1 {
+        font-size: 20px;
+      }
+
+      .noticia-conteudo p, .noticia-conteudo ul {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Logo AUMM">
+    </div>
+    <div class="menu-toggle">☰</div>
+    <nav>
+      <a href="index.html#como-funciona">Como funciona</a>
+      <a href="index.html#vantagens">Vantagens</a>
+      <a href="index.html#faq">FAQ</a>
+      <a class="btn-cadastro" href="https://forms.gle/36CqsHcLRo5EaN4CA">Me tornar um associado</a>
+    </nav>
+  </header>
+
+  <!-- CONTEÚDO DA NOTÍCIA -->
+  <section class="noticia-conteudo">
+    <img src="foto3.png" alt="Câmara de Vereadores">
+    <span class="tag">Segurança</span>
+    <h1>Associação na Câmara: voz dos motoboys de Blumenau</h1>
+    <p class="meta">18 de abril de 2025 • 6 min de leitura</p>
+    <p>Nesse dia, a emoção bateu forte!</p>
+    <p>Em meio a tanta precarização e desvalorização da categoria, a <strong>Associação União Maior Motoboys</strong> foi à Câmara de Vereadores expor todas as dificuldades encontradas pela categoria em Blumenau.</p>
+    <p>Entre as situações levantadas estavam:</p>
+    <ul>
+      <li>A <strong>Área Azul</strong>, que, na sequência, foi protocolado e aprovado o projeto de lei isentando a todos por 10 minutos.</li>
+      <li><strong>Pontos de apoio</strong>, luta essa que ainda travamos. O projeto está pronto, só depende dos vereadores e do prefeito.</li>
+      <li>Os <strong>abusos de diversas empresas</strong>, que se negam a pagar uma taxa justa, arrancada e até mesmo uma refeição decente aos motoboys.</li>
+    </ul>
+    <p><strong>Chega de exploração!</strong> A categoria está unida e vai lutar cada dia mais, se for preciso, por valorização e dignidade para todos(as).</p>
+    <a href="index.html#noticias" class="btn-voltar">Voltar para notícias</a>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <p>CNPJ: 45.115.209/0001-39 - 45115209000139</p>
+    <p>Razão Social: Associação União Maior Motoboys (Aumm)</p>
+  </footer>
+
+  <script>
+    // JavaScript para o menu hambúrguer
+    document.querySelector('.menu-toggle').addEventListener('click', () => {
+      document.querySelector('nav').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
